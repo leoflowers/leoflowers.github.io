@@ -10,6 +10,7 @@ author:
 permalink: pretty
 baseurl: ""
 highlighter: none
+markdown: kramdown
 
 exclude:
   - .jekyll-cache
@@ -19,8 +20,8 @@ compress_html:
   comments: ["<!-- ", " -->"]
 
 sass:
-  sass_dir:          _sass
-  style:            :compressed
+  sass_dir: _sass
+  style: :compressed
 
 plugins:
   - jekyll-paginate
