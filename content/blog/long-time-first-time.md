@@ -1,7 +1,7 @@
 ---
 title: "Long Time Lurker, First Time Poster"
 date: 2025-03-11T00:00:00-04:00
-draft: true
+draft: false
 categories: ["admin"]
 summary: "I've been afraid of writing..."
 ---

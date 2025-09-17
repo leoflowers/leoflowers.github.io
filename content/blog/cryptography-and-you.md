@@ -1,7 +1,7 @@
 ---
 title: "Cryptography and You"
 date: 2025-09-05T00:00:00-04:00
-draft: true
+draft: false
 categories: ["tech"]
 summary: "I've taken cryptography for granted."
 ---

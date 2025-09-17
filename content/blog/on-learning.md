@@ -1,7 +1,7 @@
 ---
 title: "On Learning"
 date: 2025-09-12T00:00:00-04:00
-draft: true
+draft: false
 categories: ["life"]
 summary: "There are two ways to learn..."
 ---
