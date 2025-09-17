@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+    <header>
+        <h1>{{ .Site.Title }}</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>{{ .Title }}</h1>
+        
+        {{ if .Content }}
+            {{ .Content }}
+        {{ end }}
+        
+        <div class="post-list">
+            <ul>
+                {{ range .Pages }}
+                    <li>
+                        <time>{{ .Date.Format "January 2, 2006" }}</time> 
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a> 
+                        {{ .Summary }}
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

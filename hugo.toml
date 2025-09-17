@@ -1,0 +1,20 @@
+baseURL = 'https://leoflowers.github.io/'
+languageCode = 'en-us'
+title = 'leo flores'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.goldmark.extensions]
+    [markup.goldmark.extensions.passthrough]
+        [markup.goldmark.extensions.passthrough.delimiters]
+            block = [['$$', '$$']]
+            inline = [['$', '$']]
+
+[params]
+  math = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

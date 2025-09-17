@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+    <header>
+        <h1>{{ .Site.Title }}</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <header class="post-header">
+                <h1>{{ .Title }}</h1>
+                <p class="post-meta">
+                    <time>{{ .Date.Format "January 2, 2006" }}</time>
+                    {{ if .Params.tags }}
+                        • Tags: 
+                        {{ range $i, $tag := .Params.tags }}
+                            {{ if $i }}, {{ end }}
+                            <span class="tag">{{ $tag }}</span>
+                        {{ end }}
+                    {{ end }}
+                </p>
+            </header>
+            
+            <div class="post-content">
+                {{ partial "math.html" . }}
+                {{ .Content }}
+            </div>
+            
+            <footer class="post-footer">
+                <a href="/blog/">&larr; Back to Blog</a>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
