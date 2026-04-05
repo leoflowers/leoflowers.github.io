@@ -2,4 +2,4 @@
 
 # run-dev: run development workflow
 
-hugo server -D
+hugo server
