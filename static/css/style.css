@@ -142,3 +142,9 @@ h1 {
     border-top: 1px solid #eee;
     padding-top: 1rem;
 }
+
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
